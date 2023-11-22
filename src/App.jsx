@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
+// This is the homepage of the application
+
+// import { Link } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 function App() {
 	return (
 		<>
 			<h1>Pawtel</h1>
 			<div className="topnav">
-				<li>
-					<Link to="about">About Page</Link>
-					<Link to="contact">Contact Page</Link>
-					<Link to="login">Login Page</Link>
-					<Link to="rooms">Rooms Page</Link>
-				</li>
+				<NavBar />
 			</div>
+
+			<div className="footer">footer is shared among all pages</div>
 		</>
 	);
 }
