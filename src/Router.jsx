@@ -5,28 +5,34 @@ import ContactPage from "./pages/ContactPage";
 // import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RoomsPage from "./pages/RoomsPage";
+import ErrorPage from "./ErrorPage";
 
 const Router = () => {
 	const router = createBrowserRouter([
 		{
 			path: "/",
 			element: <App />,
+			errorElement: <ErrorPage />,
 		},
 		{
 			path: "/about",
 			element: <AboutPage />,
+			errorElement: <ErrorPage />,
 		},
 		{
 			path: "/contact",
 			element: <ContactPage />,
+			errorElement: <ErrorPage />,
 		},
 		{
 			path: "/login",
 			element: <LoginPage />,
+			errorElement: <ErrorPage />,
 		},
 		{
 			path: "/rooms",
 			element: <RoomsPage />,
+			errorElement: <ErrorPage />,
 		},
 	]);
 
