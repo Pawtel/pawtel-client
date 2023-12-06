@@ -3,7 +3,7 @@ import App from "./App";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
-import RoomsPage from "./pages/RoomsPage";
+import BookingPage from "./pages/BookingPage";
 import ErrorPage from "./pages/ErrorPage";
 
 const Router = () => {
@@ -29,9 +29,9 @@ const Router = () => {
 			errorElement: <ErrorPage />,
 		},
 		{
-			path: "/rooms",
-			element: <RoomsPage />,
-			errorElement: <ErrorPage />,
+			path: "/book",
+			element: <BookingPage />,
+			errorElement: <BookingPage />,
 		},
 	]);
 
