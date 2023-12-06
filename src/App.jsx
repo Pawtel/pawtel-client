@@ -6,10 +6,10 @@ import NavBar from "./components/NavBar";
 function App() {
 	return (
 		<>
-			<h1>Pawtel</h1>
 			<div className="topnav">
 				<NavBar />
 			</div>
+			<h1>Pawtel</h1>
 
 			<div className="footer">footer is shared among all pages</div>
 		</>

@@ -1,5 +1,22 @@
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+
 const BookingPage = () => {
-	return <div>Booking Page</div>;
+	return (
+		<>
+			<header>
+				<NavBar />
+			</header>
+
+			<main>
+				<h1>Booking Page</h1>
+			</main>
+
+			<footer>
+				<Footer />
+			</footer>
+		</>
+	);
 };
 
 export default BookingPage;

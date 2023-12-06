@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-const ContactPage = () => {
+const HomePage = () => {
 	return (
 		<>
 			<header>
@@ -9,7 +9,7 @@ const ContactPage = () => {
 			</header>
 
 			<main>
-				<h1>Contact Page</h1>
+				<h1>About Page</h1>
 			</main>
 
 			<footer>
@@ -19,4 +19,4 @@ const ContactPage = () => {
 	);
 };
 
-export default ContactPage;
+export default HomePage;

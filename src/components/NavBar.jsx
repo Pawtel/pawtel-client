@@ -4,10 +4,21 @@ const NavBar = () => {
 	return (
 		<>
 			<li>
-				<Link to="about">About Page</Link>
-				<Link to="contact">Contact Page</Link>
-				<Link to="login">Login Page</Link>
-				<Link to="book">Booking Page</Link>
+				<Link to="/about" replace>
+					About Page
+				</Link>
+				<Link to="/contact" replace>
+					Contact Page
+				</Link>
+				<Link to="/login" replace>
+					Login Page
+				</Link>
+				<Link to="/book" replace>
+					Booking Page
+				</Link>
+				<Link to="/" replace>
+					Home Page
+				</Link>
 			</li>
 		</>
 	);
