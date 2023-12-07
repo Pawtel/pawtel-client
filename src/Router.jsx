@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import App from "./App";
+import App from "./App";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
@@ -36,7 +36,11 @@ const Router = () => {
 		},
 	]);
 
-	return <RouterProvider router={router} />;
+	return (
+		<RouterProvider router={router}>
+			<App />
+		</RouterProvider>
+	);
 };
 
 export default Router;

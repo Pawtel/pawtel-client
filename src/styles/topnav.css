@@ -1,3 +1,35 @@
+header {
+	display: flex;
+	background-color: #d9d9d9;
+	padding: 20px;
+	justify-content: flex-end;
+}
+
 .top-nav {
-	padding: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.nav-list {
+	list-style: none;
+	background-color: pink;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-list li {
+	margin-right: 10px;
+}
+
+.nav-list a {
+	text-decoration: none;
+	margin-right: 20px;
+	color: black;
+}
+
+.book-link-style {
+	font-weight: bolder;
+}
+.top-nav h1 {
+	margin: 0;
 }

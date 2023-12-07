@@ -5,21 +5,21 @@ const NavBar = () => {
 	return (
 		<>
 			<div className="top-nav">
-				<li>
-					<Link to="/about" replace>
-						About Page
-					</Link>
-					<Link to="/contact" replace>
-						Contact Page
-					</Link>
-					<Link to="/login" replace>
-						Login Page
-					</Link>
-					<Link to="/book" replace>
-						Booking Page
+				<li className="nav-list">
+					<Link className="book-link-style" to="/book" replace>
+						Book Now
 					</Link>
 					<Link to="/" replace>
-						Home Page
+						Home
+					</Link>
+					<Link to="/about" replace>
+						About
+					</Link>
+					<Link to="/contact" replace>
+						Contact
+					</Link>
+					<Link to="/login" replace>
+						Login
 					</Link>
 				</li>
 			</div>
