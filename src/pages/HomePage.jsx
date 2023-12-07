@@ -9,7 +9,7 @@ const HomePage = () => {
 			</header>
 
 			<main>
-				<h1>About Page</h1>
+				<h1>Home Page</h1>
 			</main>
 
 			<footer>

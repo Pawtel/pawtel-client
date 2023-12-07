@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 function App() {
 	return (
 		<>
-			<div className="topnav">
+			<div className="top-nav">
 				<NavBar />
 			</div>
 			<h1>Pawtel</h1>
