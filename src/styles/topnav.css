@@ -12,7 +12,7 @@ header {
 
 .nav-list {
 	list-style: none;
-	background-color: pink;
+
 	margin: 0;
 	padding: 0;
 }
@@ -29,6 +29,7 @@ header {
 
 .book-link-style {
 	font-weight: bolder;
+	padding-right: 100px;
 }
 .top-nav h1 {
 	margin: 0;
