@@ -12,9 +12,8 @@ header {
 
 .nav-list {
 	list-style: none;
-
+	padding-right: 100px;
 	margin: 0;
-	padding: 0;
 }
 
 .nav-list li {
