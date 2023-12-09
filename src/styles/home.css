@@ -1,8 +1,27 @@
 /* Homepage.css */
+@font-face {
+	font-family: "Lobster";
+	src: url("../assets/fonts/Lobster-Regular.ttf");
+}
 
 .home-container {
 	background-color: #a51d37;
 	margin-bottom: 100px;
 	padding-top: 50px;
 	padding-bottom: 50px;
+	text-align: center;
+}
+
+.home-image {
+	border-radius: 45%;
+	width: 70%;
+	height: auto;
+	margin-left: 5%;
+}
+
+.home-title {
+	font-size: 100px;
+	margin-bottom: 50px;
+	margin-top: 0px;
+	font-family: "Lobster";
 }
