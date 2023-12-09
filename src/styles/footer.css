@@ -10,3 +10,9 @@ footer {
 	padding: 20px;
 	background-color: #fde4de;
 }
+
+.logo-image {
+	width: 5%;
+	margin-right: auto;
+	padding-right: 200px;
+}

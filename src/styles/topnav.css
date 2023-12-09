@@ -40,3 +40,9 @@ a:hover {
 .top-nav h1 {
 	margin: 0;
 }
+
+.logo-image {
+	width: 5%;
+	margin-right: auto;
+	padding-right: 200px;
+}
