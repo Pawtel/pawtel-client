@@ -10,9 +10,12 @@ const HomePage = () => {
 			</header>
 
 			<main>
-				<div className="home-container">
-					<h1>Home Page</h1>
-				</div>
+				<section>
+					<div className="home-container">
+						<h1>Home Page</h1>
+					</div>
+				</section>
+				<section></section>
 			</main>
 
 			<footer>

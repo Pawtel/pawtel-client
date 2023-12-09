@@ -1,6 +1,13 @@
+/* Homepage.css */
+
 .home-container {
 	background-color: #a51d37;
 	margin-bottom: 100px;
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+main {
+	background-color: #fde4de;
+	min-height: 100vh;
 }
