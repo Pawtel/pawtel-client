@@ -1,0 +1,17 @@
+/* App.css */
+
+html,
+body {
+	width: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	background-color: #fde4de;
+	min-height: 100vh;
+}

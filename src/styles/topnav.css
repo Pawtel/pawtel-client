@@ -1,8 +1,10 @@
 header {
 	display: flex;
-	background-color: #d9d9d9;
-	padding: 20px;
+	background-color: #a6a6a6;
+	padding: 12px;
 	justify-content: flex-end;
+	position: sticky;
+	top: 0;
 }
 
 .top-nav {
@@ -24,6 +26,11 @@ header {
 	text-decoration: none;
 	margin-right: 20px;
 	color: black;
+	font-size: large;
+}
+
+a:hover {
+	color: #a51d37;
 }
 
 .book-link-style {
@@ -32,4 +39,10 @@ header {
 }
 .top-nav h1 {
 	margin: 0;
+}
+
+.logo-image {
+	width: 5%;
+	margin-right: auto;
+	padding-right: 200px;
 }
