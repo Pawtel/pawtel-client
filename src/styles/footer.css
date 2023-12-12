@@ -1,14 +1,12 @@
 /* Footer.css */
 
 footer {
-	background-color: #a6a6a6;
-	padding: 20px;
+	background-color: white;
 }
 
 .footer-container {
 	margin-top: auto;
 	padding: 20px;
-	background-color: #fde4de;
 }
 
 .logo-image {

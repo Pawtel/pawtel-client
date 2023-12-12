@@ -11,11 +11,6 @@ body {
 	margin: 0;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-}
-
 main {
 	background-color: #fde4de;
 	min-height: 100vh;
