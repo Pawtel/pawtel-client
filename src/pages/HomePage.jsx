@@ -22,6 +22,11 @@ const HomePage = () => {
 					</div>
 				</section>
 				<h3 className="testimonial-title">Testimonials</h3>
+				<div className="title-rows">
+					<h3>Review One</h3>
+					<h3>Review Two</h3>
+					<h3>Review Three</h3>
+				</div>
 				<section className="main-container">
 					<div>
 						<p>
