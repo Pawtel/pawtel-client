@@ -11,11 +11,25 @@ footer {
 
 .logo-image {
 	width: 5%;
-	margin-right: auto;
-	padding-right: 200px;
+	/* margin-right: auto; */
+	/* padding-right: 200px; */
 }
 
 .social-icons {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-around;
+}
+
+.social-icons .footer-icons {
+	padding: 10px;
+	font-size: 50px;
+	margin-top: 50px;
+}
+
+.social-icons a {
+	color: black;
+}
+
+.social-icons a:hover {
+	color: #a51d37;
 }
