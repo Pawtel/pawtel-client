@@ -14,3 +14,8 @@ footer {
 	margin-right: auto;
 	padding-right: 200px;
 }
+
+.social-icons {
+	display: flex;
+	justify-content: flex-end;
+}

@@ -39,8 +39,11 @@
 .main-container p {
 	max-width: 80%;
 	margin: auto;
-
+	font-size: 20px;
+	padding: 30px;
 	border: solid 5px #a51d37;
+	border-radius: 20%;
+	box-shadow: 5px 5px #a51d37;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 		sans-serif;
 }
@@ -48,12 +51,12 @@
 .testimonial-title {
 	font-family: "Lobster";
 	text-align: center;
-	font-size: 3em;
+	font-size: 4em;
 }
 
 .title-rows {
 	text-decoration: underline;
-	font-size: 1em;
+	font-size: 2em;
 	font-family: "Lobster";
 	display: flex;
 	flex-direction: row;
