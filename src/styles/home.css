@@ -24,3 +24,29 @@
 	margin-top: 0px;
 	font-family: "Lobster";
 }
+
+.main-container {
+	display: flex;
+	border-color: green;
+	padding: 50px;
+	border: 10px;
+}
+
+.main-container div {
+	border: solid yellow 10px;
+	margin-bottom: 50px;
+}
+
+.main-container p {
+	max-width: 80%;
+	border-color: black;
+	border: solid 10px;
+	text-align: center;
+}
+
+.testimonial-title {
+	font-family: "Lobster";
+	text-align: center;
+	font-size: 3em;
+	margin-top: -40px;
+}
