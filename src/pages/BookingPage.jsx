@@ -9,7 +9,7 @@ const BookingPage = () => {
 			</header>
 
 			<main>
-				<h1>Booking Page</h1>
+				<h1 className="title">Booking Page</h1>
 			</main>
 
 			<footer>

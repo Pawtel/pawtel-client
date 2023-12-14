@@ -9,7 +9,7 @@ const LoginPage = () => {
 			</header>
 
 			<main>
-				<h1>Login Page</h1>
+				<h1 className="title">Login Page</h1>
 			</main>
 
 			<footer>

@@ -9,7 +9,7 @@ const ContactPage = () => {
 			</header>
 
 			<main>
-				<h1>Contact Page</h1>
+				<h1 className="title">Contact Page</h1>
 			</main>
 
 			<footer>

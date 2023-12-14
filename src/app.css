@@ -16,7 +16,7 @@ main {
 	min-height: 100vh;
 }
 
-main h1 {
+main .title {
 	font-family: "Lobster";
 	text-align: center;
 	font-size: 100px;

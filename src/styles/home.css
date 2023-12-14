@@ -19,13 +19,6 @@
 	border: solid 10px #fde4de;
 }
 
-.home-title {
-	font-size: 100px;
-	margin-bottom: 50px;
-	margin-top: 0px;
-	font-family: "Lobster";
-}
-
 .main-container {
 	display: flex;
 	padding: 50px;

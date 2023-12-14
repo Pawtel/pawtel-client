@@ -13,7 +13,7 @@ const HomePage = () => {
 			<main>
 				<section>
 					<div className="home-container">
-						<h1 className="home-title">Pawtel</h1>
+						<h1 className="title">Pawtel</h1>
 						<img
 							className="home-image"
 							src={homeImage}
