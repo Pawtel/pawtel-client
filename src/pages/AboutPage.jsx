@@ -72,64 +72,70 @@ const AboutPage = () => {
 					<div>
 						<h1>Services Offered:</h1>
 
-						<h2>
-							Boarding Accommodations:{" "}
-							<FontAwesomeIcon
-								className="service-icons"
-								icon={faHouse}
-							/>
-						</h2>
-						<ul>
-							<li>Standard kennels/cages</li>
-							<li>Luxury suites or VIP rooms</li>
-							<li>Climate-controlled environments</li>
-						</ul>
+						<div className="service">
+							<h2>
+								Boarding Accommodations:{" "}
+								<FontAwesomeIcon
+									className="service-icons"
+									icon={faHouse}
+								/>
+							</h2>
+							<ul>
+								<li>Standard kennels/cages</li>
+								<li>Luxury suites or VIP rooms</li>
+								<li>Climate-controlled environments</li>
+							</ul>
+						</div>
 
-						<h2>
-							Feeding and Special Diets:{" "}
-							<FontAwesomeIcon
-								className="service-icons"
-								icon={faBowlFood}
-							/>
-						</h2>
-						<ul>
-							<li>Regular feeding schedules</li>
-							<li>
-								Specialised diets as per the owner's
-								instructions
-							</li>
-							<li>Administration of medications</li>
-						</ul>
-
-						<h2>
-							Grooming Services:{" "}
-							<FontAwesomeIcon
-								className="service-icons"
-								icon={faBath}
-							/>
-						</h2>
-						<ul>
-							<li>Bathing and brushing</li>
-							<li>Nail trimming</li>
-							<li>Haircuts and styling</li>
-							<li>Ear cleaning</li>
-						</ul>
-
-						<h2>
-							Veterinary Care:{" "}
-							<FontAwesomeIcon
-								className="service-icons"
-								icon={faShieldDog}
-							/>
-						</h2>
-						<ul>
-							<li>
-								On-site veterinary services or partnerships with
-								nearby clinics
-							</li>
-							<li>Regular health check-ups</li>
-							<li>Emergency care availability</li>
-						</ul>
+						<div className="service">
+							<h2>
+								Feeding and Special Diets:{" "}
+								<FontAwesomeIcon
+									className="service-icons"
+									icon={faBowlFood}
+								/>
+							</h2>
+							<ul>
+								<li>Regular feeding schedules</li>
+								<li>
+									Specialised diets as per the owner&apos;s
+									instructions
+								</li>
+								<li>Administration of medications</li>
+							</ul>
+						</div>
+						<div className="service">
+							<h2>
+								Grooming Services:{" "}
+								<FontAwesomeIcon
+									className="service-icons"
+									icon={faBath}
+								/>
+							</h2>
+							<ul>
+								<li>Bathing and brushing</li>
+								<li>Nail trimming</li>
+								<li>Haircuts and styling</li>
+								<li>Ear cleaning</li>
+							</ul>
+						</div>
+						<div className="service">
+							<h2>
+								Veterinary Care:{" "}
+								<FontAwesomeIcon
+									className="service-icons"
+									icon={faShieldDog}
+								/>
+							</h2>
+							<ul>
+								<li>
+									On-site veterinary services or partnerships
+									with nearby clinics
+								</li>
+								<li>Regular health check-ups</li>
+								<li>Emergency care availability</li>
+							</ul>
+						</div>
 					</div>
 				</section>
 			</main>
