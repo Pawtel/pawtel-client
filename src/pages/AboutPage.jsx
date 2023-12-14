@@ -20,7 +20,7 @@ const AboutPage = () => {
 				<h1 className="title">About Us</h1>
 				<section className="services-container">
 					<div className="history-container">
-						<h1>Our History:</h1>{" "}
+						<h1>Our History</h1>{" "}
 						<p>
 							Pawtel was established in 2010 by animal enthusiasts
 							and entrepreneurs, Jessica Liong and Luke Wheldale.
@@ -70,7 +70,7 @@ const AboutPage = () => {
 						</p>
 					</div>
 					<div>
-						<h1>Services Offered:</h1>
+						<h1>Services Offered</h1>
 
 						<div className="service">
 							<h2>

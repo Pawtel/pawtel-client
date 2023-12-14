@@ -1,7 +1,7 @@
 header {
 	display: flex;
 	/* background-color: #fde4de; */
-	background-color: white;
+	background-color: whitesmoke;
 	padding: 2px;
 	justify-content: flex-end;
 	position: sticky;
@@ -12,14 +12,14 @@ header {
 	display: flex;
 	align-items: center;
 	font-family: "Lobster";
-	background-color: white;
+	background-color: whitesmoke;
 }
 
 .nav-list {
 	list-style: none;
 	padding-right: 100px;
 	margin: 0;
-	background-color: white;
+	background-color: whitesmoke;
 }
 
 .nav-list li {
