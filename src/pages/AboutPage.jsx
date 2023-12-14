@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import "../styles/about.css";
 
 const AboutPage = () => {
 	return (
@@ -9,7 +10,7 @@ const AboutPage = () => {
 			</header>
 
 			<main>
-				<h1>About Page</h1>
+				<h1>About Us</h1>
 			</main>
 
 			<footer>

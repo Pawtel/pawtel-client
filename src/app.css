@@ -15,3 +15,11 @@ main {
 	background-color: #fde4de;
 	min-height: 100vh;
 }
+
+main h1 {
+	font-family: "Lobster";
+	text-align: center;
+	font-size: 100px;
+	margin-bottom: 50px;
+	margin-top: 0;
+}
