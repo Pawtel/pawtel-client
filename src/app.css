@@ -23,3 +23,7 @@ main .title {
 	margin-bottom: 50px;
 	margin-top: 0;
 }
+
+.title {
+	padding: 20px;
+}
