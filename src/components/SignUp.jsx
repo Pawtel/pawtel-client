@@ -67,7 +67,7 @@ const SignUp = () => {
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
-				<button onClick={handleSignUp}>Sign Up</button>
+				<button onClick={handleSignUp}>Create User</button>
 				<Link to="/login" className="login-link" replace>
 					Go back to sign in
 				</Link>
