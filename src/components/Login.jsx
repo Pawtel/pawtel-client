@@ -1,5 +1,6 @@
 import "../styles/login.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
@@ -8,11 +9,6 @@ const Login = () => {
 	const handleSignIn = () => {
 		// Implement backend sign-in logic here
 		console.log("Sign In:", { email, password });
-	};
-
-	const handleSignUp = () => {
-		// Implement backend sign-up logic here
-		console.log("Sign Up:", { email, password });
 	};
 
 	return (
@@ -37,7 +33,9 @@ const Login = () => {
 
 				<div className="buttons-container">
 					<button onClick={handleSignIn}>Sign In</button>
-					<button onClick={handleSignUp}>Sign Up</button>
+					<Link to="/signup" className="signup-link" replace>
+						Sign Up
+					</Link>
 				</div>
 			</div>
 		</div>
