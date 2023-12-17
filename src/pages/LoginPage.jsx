@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Login from "../components/Login";
 
 const LoginPage = () => {
 	return (
@@ -9,7 +10,8 @@ const LoginPage = () => {
 			</header>
 
 			<main>
-				<h1 className="title">Login Page</h1>
+				<h1 className="title">Login To Your Account</h1>
+				<Login />
 			</main>
 
 			<footer>
