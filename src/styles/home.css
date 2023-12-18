@@ -17,6 +17,7 @@
 	width: 55%;
 	height: auto;
 	border: solid 10px #fde4de;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
