@@ -47,7 +47,7 @@ To get started with the Pawtel client-side application, follow these steps:
 
 ## Deployment
 
-The Pawtel client-side application is deployed on [Netlify](https://www.netlify.com/). Visit the deployed application at [Pawtel App]().
+The Pawtel client-side application is deployed on [Netlify](https://www.netlify.com/). Visit the deployed application at [Pawtel App](https://pawtel.netlify.app).
 
 ## Repository
 
