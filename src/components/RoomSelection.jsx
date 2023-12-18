@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../styles/booking.css";
+import standardRoomImage from "../assets/images/standard-room.avif";
+import deluxeRoomImage from "../assets/images/deluxe-room.avif";
 
 const RoomSelection = ({ petDetails, onNext, onBack }) => {
 	const [selectedRoom, setSelectedRoom] = useState(null);
@@ -21,7 +23,7 @@ const RoomSelection = ({ petDetails, onNext, onBack }) => {
 			<div>
 				<img
 					className="room-image"
-					src="src/assets/images/standard-room.avif"
+					src={standardRoomImage}
 					alt="Standard Pet Room"
 					onClick={() => handleRoomSelect("standard")}
 				/>
@@ -35,7 +37,7 @@ const RoomSelection = ({ petDetails, onNext, onBack }) => {
 			<div>
 				<img
 					className="room-image"
-					src="src/assets/images/deluxe-room.avif"
+					src={deluxeRoomImage}
 					alt="Deluxe Pet Room"
 					onClick={() => handleRoomSelect("deluxe")}
 				/>
