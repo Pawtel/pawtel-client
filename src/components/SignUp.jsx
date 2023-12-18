@@ -3,9 +3,9 @@ import "../styles/signup.css";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
-	const [name, setName] = useState("");
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
 	const [address, setAddress] = useState("");
-	const [phoneNumber, setPhoneNumber] = useState("");
 	const [email, setEmail] = useState("");
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -13,9 +13,9 @@ const SignUp = () => {
 	const handleSignUp = () => {
 		// Implement backend sign-up logic here
 		console.log("Sign Up:", {
-			name,
+			firstName,
+			lastName,
 			address,
-			phoneNumber,
 			email,
 			username,
 			password,
@@ -25,11 +25,18 @@ const SignUp = () => {
 	return (
 		<div className="signup-container">
 			<div className="signup-form">
-				<label>Name:</label>
+				<label>First Name:</label>
 				<input
 					type="text"
-					value={name}
-					onChange={(e) => setName(e.target.value)}
+					value={firstName}
+					onChange={(e) => setFirstName(e.target.value)}
+					required
+				/>
+				<label>Last Name:</label>
+				<input
+					type="text"
+					value={lastName}
+					onChange={(e) => setLastName(e.target.value)}
 					required
 				/>
 				<label>Address:</label>
@@ -37,13 +44,6 @@ const SignUp = () => {
 					type="text"
 					value={address}
 					onChange={(e) => setAddress(e.target.value)}
-					required
-				/>
-				<label>Phone Number:</label>
-				<input
-					type="text"
-					value={phoneNumber}
-					onChange={(e) => setPhoneNumber(e.target.value)}
 					required
 				/>
 				<label>Email:</label>
