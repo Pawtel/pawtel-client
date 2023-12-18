@@ -49,6 +49,10 @@ To get started with the Pawtel client-side application, follow these steps:
 
 The Pawtel client-side application is deployed on [Netlify](https://www.netlify.com/). Visit the deployed application at [Pawtel App]().
 
+## Repository
+
+The Pawtel client-side repository is hosted on [GitHub](https://github.com/Pawtel/pawtel-client)
+
 ## Authors
 
 -   [Luke Wheldale](https://github.com/Looch8)
