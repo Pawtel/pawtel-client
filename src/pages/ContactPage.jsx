@@ -13,8 +13,7 @@ const ContactPage = () => {
 			<main>
 				<h1 className="title">Contact Us</h1>
 				<p className="contact-info-message">
-					Send us a message and one of our friendly staff will get
-					back to you.
+					Please feel free to contact us.
 				</p>
 				<ContactForm />
 			</main>
