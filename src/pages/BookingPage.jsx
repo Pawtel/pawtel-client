@@ -25,35 +25,40 @@ const BookingPage = () => {
 		return roomCosts[roomType] || 0;
 	};
 
+	const calculateTotalCost = (startDate, endDate, roomType) => {
+		// Calculate total cost based on room type
+		const roomCost = calculateRoomCost(roomType);
+
+		// Example: Calculate date range cost (not considering daily rate)
+		const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
+		const days = Math.round(Math.abs((startDate - endDate) / oneDay));
+
+		const dateRangeCost = days * roomCost;
+
+		return dateRangeCost;
+	};
+
 	const handleNext = (data) => {
 		if (step === 1) {
 			setPetDetails(data);
 		} else if (step === 2) {
 			setSelectedRoom(data);
 		} else if (step === 3) {
-			const startDate = data[0].startDate;
-			const endDate = data[0].endDate;
+			const startDate = data.startDate;
+			const endDate = data.endDate;
 
 			// Calculate total cost based on room type and date range
-			const roomCost = calculateRoomCost(selectedRoom);
-			const dateRangeCost = calculateDateRangeCost(startDate, endDate);
+			const totalCost = calculateTotalCost(
+				startDate,
+				endDate,
+				selectedRoom
+			);
 
 			setDateDetails({ startDate, endDate });
-			setTotalCost(roomCost + dateRangeCost);
+			setTotalCost(totalCost);
 		}
 
 		setStep((prevStep) => prevStep + 1);
-	};
-
-	const calculateDateRangeCost = (startDate, endDate) => {
-		// Add your logic to calculate the cost of the date range
-		// (e.g., based on the number of days, a daily rate, etc.)
-		const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
-		const days = Math.round(Math.abs((startDate - endDate) / oneDay));
-
-		// Example: Assume a daily rate of $50
-		const dailyRate = 50;
-		return days * dailyRate;
 	};
 
 	const handleBack = () => {
@@ -77,8 +82,9 @@ const BookingPage = () => {
 				return (
 					<DateSelection
 						selectedRoom={selectedRoom}
-						onNext={handleNext}
+						onNext={(dateRange) => handleNext(dateRange)}
 						onBack={handleBack}
+						calculateTotalCost={calculateTotalCost}
 					/>
 				);
 			case 4:
