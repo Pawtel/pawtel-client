@@ -11,3 +11,7 @@
 	justify-content: space-around;
 	align-items: center;
 }
+
+.room-image.selected {
+	border: 3px solid #a51d37;
+}

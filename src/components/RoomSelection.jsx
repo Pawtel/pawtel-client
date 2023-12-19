@@ -22,7 +22,9 @@ const RoomSelection = ({ petDetails, onNext, onBack, calculateRoomCost }) => {
 			<h2>Select a Room for Your Pet</h2>
 			<div>
 				<img
-					className="room-image"
+					className={`room-image ${
+						selectedRoom === "standard" ? "selected" : ""
+					}`}
 					src={standardRoomImage}
 					alt="Standard Pet Room"
 					onClick={() => handleRoomSelect("standard")}
@@ -36,7 +38,9 @@ const RoomSelection = ({ petDetails, onNext, onBack, calculateRoomCost }) => {
 			</div>
 			<div>
 				<img
-					className="room-image"
+					className={`room-image ${
+						selectedRoom === "deluxe" ? "selected" : ""
+					}`}
 					src={deluxeRoomImage}
 					alt="Deluxe Pet Room"
 					onClick={() => handleRoomSelect("deluxe")}
