@@ -5,6 +5,7 @@ import PetDetailsForm from "../components/PetDetailsForm";
 import RoomSelection from "../components/RoomSelection";
 import DateSelection from "../components/DateSelection";
 import ReviewBooking from "../components/ReviewBooking";
+import "../styles/booking.css";
 
 const BookingPage = () => {
 	const [step, setStep] = useState(1);

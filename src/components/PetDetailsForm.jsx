@@ -43,99 +43,101 @@ const PetDetailsForm = ({ onNext }) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<label>
-				Animal Type:
-				<input
-					type="text"
-					name="animalType"
-					value={petDetails.animalType}
-					onChange={handleInputChange}
-				/>
-			</label>
+		<div className="booking-container">
+			<form className="pet-detail-form" onSubmit={handleSubmit}>
+				<label>
+					Animal Type:
+					<input
+						type="text"
+						name="animalType"
+						value={petDetails.animalType}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Name:
-				<input
-					type="text"
-					name="name"
-					value={petDetails.name}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Name:
+					<input
+						type="text"
+						name="name"
+						value={petDetails.name}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Breed:
-				<input
-					type="text"
-					name="breed"
-					value={petDetails.breed}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Breed:
+					<input
+						type="text"
+						name="breed"
+						value={petDetails.breed}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Color:
-				<input
-					type="text"
-					name="color"
-					value={petDetails.color}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Color:
+					<input
+						type="text"
+						name="color"
+						value={petDetails.color}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Gender:
-				<input
-					type="text"
-					name="gender"
-					value={petDetails.gender}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Gender:
+					<input
+						type="text"
+						name="gender"
+						value={petDetails.gender}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Age:
-				<input
-					type="number"
-					name="age"
-					value={petDetails.age}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Age:
+					<input
+						type="number"
+						name="age"
+						value={petDetails.age}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Favourite Toys (comma-separated):
-				<input
-					type="text"
-					name="favouriteToys"
-					value={petDetails.favouriteToys.join(", ")}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Favourite Toys (comma-separated):
+					<input
+						type="text"
+						name="favouriteToys"
+						value={petDetails.favouriteToys.join(", ")}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Dietary Requirements (comma-separated):
-				<input
-					type="text"
-					name="dietaryRequirements"
-					value={petDetails.dietaryRequirements.join(", ")}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Dietary Requirements (comma-separated):
+					<input
+						type="text"
+						name="dietaryRequirements"
+						value={petDetails.dietaryRequirements.join(", ")}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<label>
-				Allergies (comma-separated):
-				<input
-					type="text"
-					name="allergies"
-					value={petDetails.allergies.join(", ")}
-					onChange={handleInputChange}
-				/>
-			</label>
+				<label>
+					Allergies (comma-separated):
+					<input
+						type="text"
+						name="allergies"
+						value={petDetails.allergies.join(", ")}
+						onChange={handleInputChange}
+					/>
+				</label>
 
-			<button type="submit">Next</button>
-		</form>
+				<button type="submit">Next</button>
+			</form>
+		</div>
 	);
 };
 
