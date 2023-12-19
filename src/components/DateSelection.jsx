@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
-import "react-date-range/dist/theme/default.css"; // theme css fileimport { useState } from "react";
+import "react-date-range/dist/theme/default.css"; // theme css fileimport
 
 const DateSelection = ({
 	onNext,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import BookingConfirmation from "./BookingConfirmation";
 
 const ReviewBooking = ({
@@ -10,13 +10,13 @@ const ReviewBooking = ({
 }) => {
 	const [bookingConfirmed, setBookingConfirmed] = useState(false);
 	const handleConfirmBooking = async () => {
-		// Assume a successful booking submission for demonstration purposes
+		// Assume a successful booking submission for demonstration purposes. Will add API end point later.
 		setBookingConfirmed(true);
 	};
 
 	const handleBookingConfirmed = () => {
 		// Handle the booking confirmation (e.g., update state, navigate to a new page)
-		// For demonstration, let's just log a message to the console
+
 		console.log(
 			"Booking confirmed! You can handle navigation or state update here."
 		);
