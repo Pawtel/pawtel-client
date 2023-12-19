@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DateRangePicker } from "react-date-range";
+import "../styles/calender.css";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css fileimport
 
