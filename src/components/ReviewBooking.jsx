@@ -9,33 +9,17 @@ const ReviewBooking = ({
 	onBack,
 }) => {
 	const [bookingConfirmed, setBookingConfirmed] = useState(false);
-
 	const handleConfirmBooking = async () => {
-		// API endpoint to handle booking submissions
-		const apiUrl = "https://your-api-endpoint.com/bookings";
+		// Assume a successful booking submission for demonstration purposes
+		setBookingConfirmed(true);
+	};
 
-		try {
-			const response = await fetch(apiUrl, {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					petDetails,
-					selectedRoom,
-					dateDetails,
-					totalCost,
-				}),
-			});
-
-			if (response.ok) {
-				setBookingConfirmed(true);
-			} else {
-				console.error("Failed to submit booking:", response.statusText);
-			}
-		} catch (error) {
-			console.error("Error during booking submission:", error.message);
-		}
+	const handleBookingConfirmed = () => {
+		// Handle the booking confirmation (e.g., update state, navigate to a new page)
+		// For demonstration, let's just log a message to the console
+		console.log(
+			"Booking confirmed! You can handle navigation or state update here."
+		);
 	};
 
 	return (
@@ -43,7 +27,10 @@ const ReviewBooking = ({
 			<button onClick={onBack}>Back</button>
 
 			{bookingConfirmed ? (
-				<BookingConfirmation />
+				<BookingConfirmation
+					startDate={dateDetails.startDate.toDateString()}
+					onConfirm={handleBookingConfirmed}
+				/>
 			) : (
 				<>
 					{/* Render a summary of pet details, room selection, date details, and total cost */}

@@ -1,9 +1,9 @@
-const BookingConfirmation = ({ onConfirm }) => {
+const BookingConfirmation = ({ startDate }) => {
 	return (
 		<div>
 			<h2>Booking Confirmed!</h2>
 			<p>Your booking has been confirmed.</p>
-			<button onClick={onConfirm}>Confirm</button>
+			<p>We will see you on {startDate}!</p>
 		</div>
 	);
 };
