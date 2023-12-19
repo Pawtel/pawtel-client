@@ -17,7 +17,6 @@ const BookingPage = () => {
 	const [totalCost, setTotalCost] = useState(0);
 
 	const calculateRoomCost = (roomType) => {
-		// Add your logic to calculate the cost of the room
 		const roomCosts = {
 			standard: 100,
 			deluxe: 150,
@@ -29,7 +28,6 @@ const BookingPage = () => {
 		// Calculate total cost based on room type
 		const roomCost = calculateRoomCost(roomType);
 
-		// Example: Calculate date range cost (not considering daily rate)
 		const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
 		const days = Math.round(Math.abs((startDate - endDate) / oneDay));
 
