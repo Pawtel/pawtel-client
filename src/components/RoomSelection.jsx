@@ -3,7 +3,7 @@ import "../styles/booking.css";
 import standardRoomImage from "../assets/images/standard-room.avif";
 import deluxeRoomImage from "../assets/images/deluxe-room.avif";
 
-const RoomSelection = ({ petDetails, onNext, onBack }) => {
+const RoomSelection = ({ petDetails, onNext, onBack, calculateRoomCost }) => {
 	const [selectedRoom, setSelectedRoom] = useState(null);
 
 	const handleRoomSelect = (roomType) => {
@@ -32,7 +32,7 @@ const RoomSelection = ({ petDetails, onNext, onBack }) => {
 					Comfortable and cozy accommodation for your furry friend.
 					Features a soft bed, play area, and basic amenities.
 				</p>
-				<p>Cost per day: $100</p>
+				<p>Cost per day: ${calculateRoomCost("standard")}</p>
 			</div>
 			<div>
 				<img
@@ -46,7 +46,7 @@ const RoomSelection = ({ petDetails, onNext, onBack }) => {
 					Spacious and luxurious accommodation for your pet. Includes
 					a deluxe bed, private play area, and premium amenities.
 				</p>
-				<p>Cost per day: $150</p>
+				<p>Cost per day: ${calculateRoomCost("deluxe")}</p>
 			</div>
 			<div>
 				<button onClick={handleSubmit}>Next</button>
