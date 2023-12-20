@@ -44,6 +44,7 @@ const PetDetailsForm = ({ onNext }) => {
 
 	return (
 		<div className="booking-container">
+			<h1>Pet details</h1>
 			<form className="pet-detail-form" onSubmit={handleSubmit}>
 				<label>
 					Animal Type:
