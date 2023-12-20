@@ -60,7 +60,7 @@ const RoomSelection = ({ petDetails, onNext, onBack, calculateRoomCost }) => {
 					</div>
 				</div>
 			</div>
-			<div className="room-buttons">
+			<div className="submit-buttons">
 				<button className="submit-button" onClick={onBack}>
 					Back
 				</button>

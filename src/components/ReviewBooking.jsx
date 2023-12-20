@@ -24,8 +24,6 @@ const ReviewBooking = ({
 
 	return (
 		<div>
-			<button onClick={onBack}>Back</button>
-
 			{bookingConfirmed ? (
 				<BookingConfirmation
 					startDate={dateDetails.startDate.toDateString()}
@@ -33,42 +31,83 @@ const ReviewBooking = ({
 				/>
 			) : (
 				<>
-					{/* Render a summary of pet details, room selection, date details, and total cost */}
-					<h2>Review Your Booking</h2>
-					<p>Name: {petDetails.name}</p>
-					<p>Animal Type: {petDetails.animalType}</p>
-					<p>Breed: {petDetails.breed}</p>
-					<p>Colour: {petDetails.color}</p>
-					<p>Gender {petDetails.gender}</p>
-					<p>Age: {petDetails.age}</p>
-					<p>Favourite Toys: {petDetails.favouriteToys}</p>
-					<p>
-						Dietary Requirements: {petDetails.dietaryRequirements}
-					</p>
-					<p>Allergies: {petDetails.allergies}</p>
+					<div className="summary-container">
+						<h1>Review Your Booking</h1>
 
-					<div>
-						<h3>Room Selection</h3>
-						<p>Selected Room: {selectedRoom}</p>
+						<div className="pet-details">
+							<h3>Pet Details</h3>
+							<p>
+								<strong>Name:</strong> {petDetails.name}
+							</p>
+							<p>
+								<strong>Animal Type:</strong>{" "}
+								{petDetails.animalType}
+							</p>
+							<p>
+								<strong>Breed:</strong> {petDetails.breed}
+							</p>
+							<p>
+								<strong>Colour:</strong> {petDetails.color}
+							</p>
+							<p>
+								<strong>Gender:</strong> {petDetails.gender}
+							</p>
+							<p>
+								<strong>Age:</strong> {petDetails.age}
+							</p>
+							<p>
+								<strong>Favourite Toys:</strong>{" "}
+								{petDetails.favouriteToys.join(", ")}
+							</p>
+							<p>
+								<strong>Dietary Requirements:</strong>{" "}
+								{petDetails.dietaryRequirements.join(", ")}
+							</p>
+							<p>
+								<strong>Allergies:</strong>{" "}
+								{petDetails.allergies.join(", ")}
+							</p>
+						</div>
+
+						<div className="room-selection">
+							<h3>Room Selection</h3>
+							<p>
+								<strong>Selected Room:</strong> {selectedRoom}
+							</p>
+						</div>
+
+						<div className="date-details">
+							<h3>Date Details</h3>
+							<p>
+								<strong>Start Date:</strong>{" "}
+								{dateDetails.startDate.toDateString()}
+							</p>
+							<p>
+								<strong>End Date:</strong>{" "}
+								{dateDetails.endDate.toDateString()}
+							</p>
+						</div>
+
+						<div className="total-cost">
+							<h3>Total Cost</h3>
+							<p>
+								<strong>${totalCost}</strong>
+							</p>
+						</div>
 					</div>
 
-					<div>
-						<h3>Date Details</h3>
-						{/* Display the start and end dates or date range */}
-						<p>
-							Start Date: {dateDetails.startDate.toDateString()}
-						</p>
-						<p>End Date: {dateDetails.endDate.toDateString()}</p>
-					</div>
+					<div className="submit-buttons">
+						<button className="submit-button" onClick={onBack}>
+							Back
+						</button>
 
-					<div>
-						<h3>Total Cost</h3>
-						<p>${totalCost}</p>
+						<button
+							className="submit-button"
+							onClick={handleConfirmBooking}
+						>
+							Confirm Booking
+						</button>
 					</div>
-
-					<button onClick={handleConfirmBooking}>
-						Confirm Booking
-					</button>
 				</>
 			)}
 		</div>

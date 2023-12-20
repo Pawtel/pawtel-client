@@ -39,15 +39,23 @@ const DateSelection = ({
 	};
 
 	return (
-		<div>
-			<h2>Select Stay Dates</h2>
-			<DateRangePicker
-				ranges={dateRange}
-				onChange={(ranges) => setDateRange([ranges.selection])}
-			/>
-			<button onClick={handleSubmit}>Next</button>
-			<button onClick={onBack}>Back</button>
-		</div>
+		<>
+			<h1>Select Stay Dates</h1>
+			<div className="calender-container">
+				<DateRangePicker
+					ranges={dateRange}
+					onChange={(ranges) => setDateRange([ranges.selection])}
+				/>
+			</div>
+			<div className="submit-buttons">
+				<button className="submit-button" onClick={onBack}>
+					Back
+				</button>
+				<button className="submit-button" onClick={handleSubmit}>
+					Next
+				</button>
+			</div>
+		</>
 	);
 };
 
