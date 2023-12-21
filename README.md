@@ -32,6 +32,16 @@ To get started with the Pawtel client-side application, follow these steps:
 
 5. Open your browser and visit `http://localhost:3000` to view the Pawtel application.
 
+## Testing
+
+Pawtel uses `vitest` for testing. To run the tests, use the following command:
+
+```bash
+   npm test
+```
+
+This will execute the test suite and provide information about the test results.
+
 ## Features
 
 -   Browse and search for pet-friendly accommodations.
@@ -44,6 +54,8 @@ To get started with the Pawtel client-side application, follow these steps:
 -   React Router
 -   Vite
 -   FontAwesome
+-   Vitest
+-   Netlify
 
 ## Deployment
 
