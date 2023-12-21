@@ -9,22 +9,28 @@ const Login = () => {
 	const handleSignIn = () => {
 		// Implement backend sign-in logic here
 		console.log("Sign In:", { email, password });
+
+		// Clear the input fields
+		setEmail("");
+		setPassword("");
 	};
 
 	return (
 		<div className="login-container">
 			<h2>Sign In / Sign Up</h2>
 			<div className="login-form">
-				<label>Email:</label>
+				<label htmlFor="email">Email:</label>
 				<input
+					id="email"
 					type="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 					required
 				/>
 
-				<label>Password:</label>
+				<label htmlFor="password">Password:</label>
 				<input
+					id="password"
 					type="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
