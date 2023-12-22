@@ -25,43 +25,49 @@ const SignUp = () => {
 	return (
 		<div className="signup-container">
 			<div className="signup-form">
-				<label>First Name:</label>
+				<label htmlFor="firstName">First Name:</label>
 				<input
+					id="firstName"
 					type="text"
 					value={firstName}
 					onChange={(e) => setFirstName(e.target.value)}
 					required
 				/>
-				<label>Last Name:</label>
+				<label htmlFor="lastName">Last Name:</label>
 				<input
+					id="lastName"
 					type="text"
 					value={lastName}
 					onChange={(e) => setLastName(e.target.value)}
 					required
 				/>
-				<label>Address:</label>
+				<label htmlFor="address">Address:</label>
 				<input
+					id="address"
 					type="text"
 					value={address}
 					onChange={(e) => setAddress(e.target.value)}
 					required
 				/>
-				<label>Email:</label>
+				<label htmlFor="email">Email:</label>
 				<input
+					id="email"
 					type="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 					required
 				/>
-				<label>Username:</label>
+				<label htmlFor="username">Username:</label>
 				<input
+					id="username"
 					type="text"
 					value={username}
 					onChange={(e) => setUsername(e.target.value)}
 					required
 				/>
-				<label>Password:</label>
+				<label htmlFor="password">Password:</label>
 				<input
+					id="password"
 					type="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
