@@ -104,6 +104,7 @@ const SignUp = () => {
 					id="email"
 					type="email"
 					value={email}
+					placeholder="Must be a valid email address"
 					onChange={(e) => setEmail(e.target.value)}
 					required
 				/>
@@ -120,6 +121,7 @@ const SignUp = () => {
 					id="password"
 					type="password"
 					value={password}
+					placeholder="Must be at least 8 characters long"
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
