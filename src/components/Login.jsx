@@ -9,6 +9,8 @@ const Login = () => {
 	const [error, setError] = useState(null);
 	const [message, setMessage] = useState("");
 
+	let jwtToken = null;
+
 	const handleSignIn = async () => {
 		try {
 			const response = await axios.post(
@@ -19,19 +21,26 @@ const Login = () => {
 				}
 			);
 
-			const jwtToken = response.data.jwt;
+			jwtToken = response.data.jwt;
 			console.log("JWT Token:", jwtToken);
-
-			// Store the JWT token in the browser's local storage
-			localStorage.setItem("jwtToken", jwtToken);
 
 			setEmail("");
 			setPassword("");
 			setMessage("Successful login");
+			console.log("Successful login");
 		} catch (error) {
 			setError("Invalid email or password");
 			setMessage("");
 		}
+
+		axios.get(
+			"https://pawtel-48da552cecec.herokuapp.com/protected-endpoint",
+			{
+				headers: {
+					Authorization: `Bearer ${jwtToken}`,
+				},
+			}
+		);
 	};
 
 	return (

@@ -64,6 +64,7 @@ The Pawtel client-side application is deployed on [Netlify](https://www.netlify.
 ## Repository
 
 The Pawtel client-side repository is hosted on [GitHub](https://github.com/Pawtel/pawtel-client)
+The Pawtel server0side reposity is hosted on [Heroku](https://pawtel-48da552cecec.herokuapp.com/)
 
 ## Authors
 
