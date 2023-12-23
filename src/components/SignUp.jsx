@@ -15,7 +15,7 @@ const SignUp = () => {
 			// Define the endpoint URL for user registration
 			// Change this later with actual backend endpoint
 			const signUpEndpoint =
-				"https://pawtel-48da552cecec.herokuapp.com/users";
+				"https://pawtel-48da552cecec.herokuapp.com/users/register";
 
 			// Prepare the user data to send to the server
 			const userData = {
@@ -58,7 +58,7 @@ const SignUp = () => {
 	return (
 		<div className="signup-container">
 			<div className="signup-form">
-				<label htmlFor="firstName">First Name test1:</label>
+				<label htmlFor="firstName">First Name:</label>
 				<input
 					id="firstName"
 					type="text"
