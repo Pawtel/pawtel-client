@@ -19,7 +19,6 @@ const DateSelection = ({
 	]);
 
 	const handleSubmit = () => {
-		// Ensure dateRange is an array with a valid object before proceeding
 		if (dateRange && Array.isArray(dateRange) && dateRange[0]) {
 			const startDate = dateRange[0].startDate;
 			const endDate = dateRange[0].endDate;

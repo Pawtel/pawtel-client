@@ -4,14 +4,18 @@ import axios from "axios";
 import "../styles/login.css";
 import { jwtDecode } from "jwt-decode";
 
+// Functional component for the Login page
 const Login = () => {
+	// State variables to manage email, password, error message, and success message
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState(null);
 	const [message, setMessage] = useState("");
 
+	// Function to handle user sign-in
 	const handleSignIn = async () => {
 		try {
+			// Making a POST request to the server for user authentication
 			const response = await axios.post(
 				"https://pawtel-48da552cecec.herokuapp.com/users/login",
 				{
@@ -20,29 +24,31 @@ const Login = () => {
 				}
 			);
 
+			// Extracting JWT token from the response and storing it in local storage
 			const jwtToken = response.data.jwt;
 			console.log("JWT Token:", jwtToken);
-
-			// Store the JWT token in the local storage
 			localStorage.setItem("jwt", jwtToken);
 
+			// Resetting form fields and displaying success message
 			setEmail("");
 			setPassword("");
 			setMessage("Successful login");
 			console.log("Successful login");
 		} catch (error) {
+			// Handling authentication error and displaying an error message
 			setError("Invalid email or password");
 			setMessage("");
 		}
 
-		// Use the JWT token from the local storage
+		// Using the JWT token from local storage for further actions
 		const jwtToken = localStorage.getItem("jwt");
 
 		if (jwtToken) {
-			// Decode the JWT token to get the user ID
+			// Decoding the JWT token to extract user ID
 			const decodedToken = jwtDecode(jwtToken);
 			const userId = decodedToken.userId;
 
+			// Making a GET request to fetch user details using the decoded user ID
 			axios
 				.get(
 					"https://pawtel-48da552cecec.herokuapp.com/users/" + userId,
@@ -53,6 +59,7 @@ const Login = () => {
 					}
 				)
 				.catch((error) => {
+					// Handling errors during the GET request, logging to console
 					if (error.response && error.response.status === 404) {
 						console.log("User not found on the server.");
 					} else {
@@ -62,14 +69,17 @@ const Login = () => {
 					}
 				});
 		} else {
+			// Logging a message if no JWT token is found in local storage
 			console.log("No JWT token found in local storage.");
 		}
 	};
 
+	// Rendering the login form JSX
 	return (
 		<div className="login-container">
 			<h2>Sign In / Sign Up</h2>
 			<div className="login-form">
+				{/* Input fields for email and password */}
 				<label htmlFor="email">Email:</label>
 				<input
 					id="email"
@@ -88,10 +98,11 @@ const Login = () => {
 					required
 				/>
 
+				{/* Displaying error and success messages if present */}
 				{error && <div className="error-message">{error}</div>}
-
 				{message && <div className="success-message">{message}</div>}
 
+				{/* Buttons for signing in and linking to the sign-up page */}
 				<div className="buttons-container">
 					<button onClick={handleSignIn}>Sign In</button>
 					<Link to="/signup" className="signup-link" replace>
@@ -103,4 +114,5 @@ const Login = () => {
 	);
 };
 
+// Exporting the Login component
 export default Login;

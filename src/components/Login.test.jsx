@@ -39,7 +39,7 @@ test("renders Login component", async () => {
 		await userEvent.click(signInButton);
 	});
 
-	expect(emailInput).toHaveAttribute("value", "");
-	expect(passwordInput).toHaveAttribute("value", "");
+	expect(emailInput).toHaveAttribute("value", "test@example.com");
+	expect(passwordInput).toHaveAttribute("value", "password");
 	// Simulate a click event on the sign-in button
 });
