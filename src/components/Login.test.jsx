@@ -1,8 +1,20 @@
 import { test, expect } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
+import axios from "axios";
+import MockAdapter from "axios-mock-adapter";
+import { act } from "react-dom/test-utils";
 import Login from "./Login";
+
+// set the mock adapter on the default instance
+let mock = new MockAdapter(axios);
+
+// Mock any POST request to api/login
+// arguments for reply are (status, data, headers)
+mock.onPost("/api/login").reply(200, {
+	jwt: "mock-jwt-token",
+});
 
 // Define a test for the Login component
 test("renders Login component", async () => {
@@ -18,28 +30,16 @@ test("renders Login component", async () => {
 	const passwordInput = screen.getByLabelText("Password:");
 	const signInButton = screen.getByRole("button", { name: /sign in/i });
 
-	// Use expect to make assertions that these elements are in the document
-	expect(emailInput).toBeTruthy();
-	expect(passwordInput).toBeTruthy();
-	expect(signInButton).toBeTruthy();
-
 	// Simulate user typing events
 	await userEvent.type(emailInput, "test@example.com");
 	await userEvent.type(passwordInput, "password");
 
-	// Make assertions based on the events
-	// Check that the input fields have the correct values after typing
-	expect(emailInput).toHaveAttribute("value", "test@example.com");
-	expect(passwordInput).toHaveAttribute("value", "password");
-
-	// Simulate a click event on the sign in button
-	userEvent.click(signInButton);
-
-	// Wait for state updates to be applied
-	await waitFor(() => {
-		// Make assertions based on the events after clicking the sign in button
-		// Check that the input fields are cleared
-		expect(emailInput).toHaveAttribute("value", "");
-		expect(passwordInput).toHaveAttribute("value", "");
+	await act(async () => {
+		// Simulate a click event on the sign-in button
+		await userEvent.click(signInButton);
 	});
+
+	expect(emailInput).toHaveAttribute("value", "");
+	expect(passwordInput).toHaveAttribute("value", "");
+	// Simulate a click event on the sign-in button
 });

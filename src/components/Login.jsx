@@ -1,18 +1,33 @@
-import "../styles/login.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import "../styles/Login.css";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [error, setError] = useState(null);
 
-	const handleSignIn = () => {
-		// Implement backend sign-in logic here
-		console.log("Sign In:", { email, password });
+	const handleSignIn = async () => {
+		try {
+			// Need to change this to your backend endpoint
+			const response = await axios.post("/api/login", {
+				email: email,
+				password: password,
+			});
 
-		// Clear the input fields
-		setEmail("");
-		setPassword("");
+			// Get the JWT token from the response
+			const jwtToken = response.data.jwt;
+
+			console.log("JWT Token:", jwtToken);
+
+			// Clear the input fields
+			setEmail("");
+			setPassword("");
+		} catch (error) {
+			// Handle login error
+			setError("Invalid email or password");
+		}
 	};
 
 	return (
@@ -36,6 +51,8 @@ const Login = () => {
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
+
+				{error && <div className="error-message">{error}</div>}
 
 				<div className="buttons-container">
 					<button onClick={handleSignIn}>Sign In</button>
