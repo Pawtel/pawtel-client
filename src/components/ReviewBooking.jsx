@@ -9,14 +9,39 @@ const ReviewBooking = ({
 	onBack,
 }) => {
 	const [bookingConfirmed, setBookingConfirmed] = useState(false);
+	const createBookingEndpoint = "YOUR_API_ENDPOINT"; // Replace with our actualy API endpoint
+
 	const handleConfirmBooking = async () => {
-		// Assume a successful booking submission for demonstration purposes. Will add API end point later.
-		setBookingConfirmed(true);
+		try {
+			const response = await fetch(createBookingEndpoint, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					/* your booking data */
+				}),
+			});
+
+			// Regardless of the response status, set bookingConfirmed to true
+			setBookingConfirmed(true);
+
+			if (!response.ok) {
+				// Handle errors (e.g., display an error message)
+				console.error("Failed to create booking:", response.statusText);
+			}
+
+			// Handle success...
+		} catch (error) {
+			console.error(
+				"An error occurred during booking confirmation:",
+				error
+			);
+		}
 	};
 
 	const handleBookingConfirmed = () => {
 		// Handle the booking confirmation (e.g., update state, navigate to a new page)
-
 		console.log(
 			"Booking confirmed! You can handle navigation or state update here."
 		);
