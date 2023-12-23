@@ -38,15 +38,32 @@ const Login = () => {
 		// Use the JWT token from the local storage
 		const jwtToken = localStorage.getItem("jwt");
 
-		// Decode the JWT token to get the user ID
-		const decodedToken = jwtDecode(jwtToken);
-		const userId = decodedToken.userId;
+		if (jwtToken) {
+			// Decode the JWT token to get the user ID
+			const decodedToken = jwtDecode(jwtToken);
+			const userId = decodedToken.userId;
 
-		axios.get("https://pawtel-48da552cecec.herokuapp.com/users/" + userId, {
-			headers: {
-				Authorization: `Bearer ${jwtToken}`,
-			},
-		});
+			axios
+				.get(
+					"https://pawtel-48da552cecec.herokuapp.com/users/" + userId,
+					{
+						headers: {
+							Authorization: `Bearer ${jwtToken}`,
+						},
+					}
+				)
+				.catch((error) => {
+					if (error.response && error.response.status === 404) {
+						console.log("User not found on the server.");
+					} else {
+						console.log(
+							"An error occurred while making the GET request."
+						);
+					}
+				});
+		} else {
+			console.log("No JWT token found in local storage.");
+		}
 	};
 
 	return (
