@@ -7,10 +7,10 @@ const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState(null);
+	const [message, setMessage] = useState("");
 
 	const handleSignIn = async () => {
 		try {
-			// Need to change this to your backend endpoint
 			const response = await axios.post(
 				"https://pawtel-48da552cecec.herokuapp.com/users/login",
 				{
@@ -19,17 +19,15 @@ const Login = () => {
 				}
 			);
 
-			// Get the JWT token from the response
 			const jwtToken = response.data.jwt;
-
 			console.log("JWT Token:", jwtToken);
 
-			// Clear the input fields
 			setEmail("");
 			setPassword("");
+			setMessage("Successful login");
 		} catch (error) {
-			// Handle login error
 			setError("Invalid email or password");
+			setMessage("");
 		}
 	};
 
@@ -56,6 +54,8 @@ const Login = () => {
 				/>
 
 				{error && <div className="error-message">{error}</div>}
+
+				{message && <div className="success-message">{message}</div>}
 
 				<div className="buttons-container">
 					<button onClick={handleSignIn}>Sign In</button>
