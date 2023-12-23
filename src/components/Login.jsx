@@ -9,8 +9,6 @@ const Login = () => {
 	const [error, setError] = useState(null);
 	const [message, setMessage] = useState("");
 
-	let jwtToken = null;
-
 	const handleSignIn = async () => {
 		try {
 			const response = await axios.post(
@@ -21,8 +19,11 @@ const Login = () => {
 				}
 			);
 
-			jwtToken = response.data.jwt;
+			const jwtToken = response.data.jwt;
 			console.log("JWT Token:", jwtToken);
+
+			// Store the JWT token in the local storage
+			localStorage.setItem("jwt", jwtToken);
 
 			setEmail("");
 			setPassword("");
@@ -32,6 +33,9 @@ const Login = () => {
 			setError("Invalid email or password");
 			setMessage("");
 		}
+
+		// Use the JWT token from the local storage
+		const jwtToken = localStorage.getItem("jwt");
 
 		axios.get(
 			"https://pawtel-48da552cecec.herokuapp.com/protected-endpoint",
