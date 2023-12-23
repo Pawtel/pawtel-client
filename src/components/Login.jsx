@@ -40,9 +40,9 @@ const Login = () => {
 
 		// Decode the JWT token to get the user ID
 		const decodedToken = jwtDecode(jwtToken);
-		const userId = decodedToken.userId;
+		const userID = decodedToken.userID;
 
-		axios.get("https://pawtel-48da552cecec.herokuapp.com/users/" + userId, {
+		axios.get("https://pawtel-48da552cecec.herokuapp.com/users/" + userID, {
 			headers: {
 				Authorization: `Bearer ${jwtToken}`,
 			},
