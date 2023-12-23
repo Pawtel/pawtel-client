@@ -8,6 +8,7 @@ import { jwtDecode } from "jwt-decode";
 const Login = () => {
 	// State variables to manage email, password, error message, and success message
 	const [email, setEmail] = useState("");
+	// const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState(null);
 	const [message, setMessage] = useState("");
@@ -80,7 +81,7 @@ const Login = () => {
 			<h2>Sign In / Sign Up</h2>
 			<div className="login-form">
 				{/* Input fields for email and password */}
-				<label htmlFor="email">Email:</label>
+				<label htmlFor="email">Username:</label>
 				<input
 					id="email"
 					type="email"
