@@ -14,7 +14,8 @@ const SignUp = () => {
 		try {
 			// Define the endpoint URL for user registration
 			// Change this later with actual backend endpoint
-			const signUpEndpoint = "https://backend-api.com/signup";
+			const signUpEndpoint =
+				"https://pawtel-48da552cecec.herokuapp.com/users/register";
 
 			// Prepare the user data to send to the server
 			const userData = {
