@@ -22,6 +22,9 @@ const Login = () => {
 			const jwtToken = response.data.jwt;
 			console.log("JWT Token:", jwtToken);
 
+			// Store the JWT token in the browser's local storage
+			localStorage.setItem("jwtToken", jwtToken);
+
 			setEmail("");
 			setPassword("");
 			setMessage("Successful login");
