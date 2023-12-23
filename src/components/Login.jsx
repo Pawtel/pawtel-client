@@ -37,14 +37,11 @@ const Login = () => {
 		// Use the JWT token from the local storage
 		const jwtToken = localStorage.getItem("jwt");
 
-		axios.get(
-			"https://pawtel-48da552cecec.herokuapp.com/protected-endpoint",
-			{
-				headers: {
-					Authorization: `Bearer ${jwtToken}`,
-				},
-			}
-		);
+		axios.get("https://pawtel-48da552cecec.herokuapp.com/users/" + userId, {
+			headers: {
+				Authorization: `Bearer ${jwtToken}`,
+			},
+		});
 	};
 
 	return (
