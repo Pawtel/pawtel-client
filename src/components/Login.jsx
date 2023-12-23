@@ -11,10 +11,13 @@ const Login = () => {
 	const handleSignIn = async () => {
 		try {
 			// Need to change this to your backend endpoint
-			const response = await axios.post("/api/login", {
-				email: email,
-				password: password,
-			});
+			const response = await axios.post(
+				"https://pawtel-48da552cecec.herokuapp.com/users/login",
+				{
+					email: email,
+					password: password,
+				}
+			);
 
 			// Get the JWT token from the response
 			const jwtToken = response.data.jwt;
