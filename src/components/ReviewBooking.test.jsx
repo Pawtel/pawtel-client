@@ -1,4 +1,4 @@
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import ReviewBooking from "./ReviewBooking";
 import { expect, test } from "vitest";
 
@@ -52,6 +52,5 @@ test("ReviewBooking renders correctly", async () => {
 	fireEvent.click(confirmButton);
 
 	// Check if the "Booking Confirmed" text is in the document
-	const bookingConfirmation = getByText(/Booking Confirmed/i);
-	expect(bookingConfirmation).toBeInTheDocument();
+	await waitFor(() => getByText(/Booking Confirmed/i));
 });

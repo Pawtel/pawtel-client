@@ -41,10 +41,7 @@ const ReviewBooking = ({
 	};
 
 	const handleBookingConfirmed = () => {
-		// Handle the booking confirmation (e.g., update state, navigate to a new page)
-		console.log(
-			"Booking confirmed! You can handle navigation or state update here."
-		);
+		console.log("Booking confirmed!.");
 	};
 
 	return (
