@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/login.css";
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
@@ -36,6 +37,10 @@ const Login = () => {
 
 		// Use the JWT token from the local storage
 		const jwtToken = localStorage.getItem("jwt");
+
+		// Decode the JWT token to get the user ID
+		const decodedToken = jwtDecode(jwtToken);
+		const userId = decodedToken.userId;
 
 		axios.get("https://pawtel-48da552cecec.herokuapp.com/users/" + userId, {
 			headers: {

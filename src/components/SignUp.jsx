@@ -13,7 +13,7 @@ const SignUp = () => {
 	const handleSignUp = async () => {
 		try {
 			// Define the endpoint URL for user registration
-			// Change this later with actual backend endpoint
+
 			const signUpEndpoint =
 				"https://pawtel-48da552cecec.herokuapp.com/users/register";
 
