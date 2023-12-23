@@ -58,7 +58,7 @@ const SignUp = () => {
 	return (
 		<div className="signup-container">
 			<div className="signup-form">
-				<label htmlFor="firstName">First Name test:</label>
+				<label htmlFor="firstName">First Name test1:</label>
 				<input
 					id="firstName"
 					type="text"
