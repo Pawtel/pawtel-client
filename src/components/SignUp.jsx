@@ -10,16 +10,41 @@ const SignUp = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
-	const handleSignUp = () => {
-		// Implement backend sign-up logic here
-		console.log("Sign Up:", {
-			firstName,
-			lastName,
-			address,
-			email,
-			username,
-			password,
-		});
+	const handleSignUp = async () => {
+		try {
+			// Define the endpoint URL for user registration
+			// Change this later with actual backend endpoint
+			const signUpEndpoint = "https://backend-api.com/signup";
+
+			// Prepare the user data to send to the server
+			const userData = {
+				firstName,
+				lastName,
+				address,
+				email,
+				username,
+				password,
+			};
+
+			// Send a POST request to the server
+			const response = await fetch(signUpEndpoint, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(userData),
+			});
+
+			// Check if the request was successful (status code 200)
+			if (response.ok) {
+				console.log("User successfully created!");
+			} else {
+				// Handle errors (e.g., display an error message)
+				console.error("Failed to create user:", response.statusText);
+			}
+		} catch (error) {
+			console.error("An error occurred during sign-up:", error);
+		}
 	};
 
 	return (
