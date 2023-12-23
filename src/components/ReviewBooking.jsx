@@ -9,7 +9,7 @@ const ReviewBooking = ({
 	onBack,
 }) => {
 	const [bookingConfirmed, setBookingConfirmed] = useState(false);
-	const createBookingEndpoint = "YOUR_API_ENDPOINT"; // Replace with our actualy API endpoint
+	const createBookingEndpoint = "https://jsonplaceholder.typicode.com/posts"; // Replace with our actual API endpoint
 
 	const handleConfirmBooking = async () => {
 		try {
@@ -19,7 +19,7 @@ const ReviewBooking = ({
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
-					/* your booking data */
+					/* our booking data */
 				}),
 			});
 
