@@ -39,7 +39,6 @@ const SignUp = () => {
 			// parse response data
 			const data = await response.json();
 
-			// Check if the request was successful (status code 200)
 			if (response.ok) {
 				console.log("User successfully created!", data);
 				alert("User successfully created!");
@@ -51,7 +50,22 @@ const SignUp = () => {
 				setPassword("");
 			} else {
 				// Handle errors (e.g., display an error message)
-				console.error("Failed to create user:", data);
+				if (data.errors) {
+					if (data.errors.email) {
+						console.error(
+							"Email error:",
+							data.errors.email.message
+						);
+					}
+					if (data.errors.password) {
+						console.error(
+							"Password error:",
+							data.errors.password.message
+						);
+					}
+				} else {
+					console.error("Failed to create user:", data);
+				}
 			}
 		} catch (error) {
 			console.error("An error occurred during sign-up:", error);
