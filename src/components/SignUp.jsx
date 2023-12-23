@@ -15,7 +15,7 @@ const SignUp = () => {
 			// Define the endpoint URL for user registration
 			// Change this later with actual backend endpoint
 			const signUpEndpoint =
-				"https://pawtel-48da552cecec.herokuapp.com/users/register";
+				"https://pawtel-48da552cecec.herokuapp.com/users/register/";
 
 			// Prepare the user data to send to the server
 			const userData = {
@@ -39,6 +39,13 @@ const SignUp = () => {
 			// Check if the request was successful (status code 200)
 			if (response.ok) {
 				console.log("User successfully created!");
+				alert("User successfully created!");
+				setFirstName("");
+				setLastName("");
+				setAddress("");
+				setEmail("");
+				setUsername("");
+				setPassword("");
 			} else {
 				// Handle errors (e.g., display an error message)
 				console.error("Failed to create user:", response.statusText);
