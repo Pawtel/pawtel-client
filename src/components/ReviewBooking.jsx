@@ -9,7 +9,7 @@ const ReviewBooking = ({
 	onBack,
 }) => {
 	const [bookingConfirmed, setBookingConfirmed] = useState(false);
-	const createBookingEndpoint = "https://jsonplaceholder.typicode.com/posts"; // Replace with our actual API endpoint
+	const createBookingEndpoint = "https://pawtel-48da552cecec.herokuapp.com/bookings";
 
 	const handleConfirmBooking = async () => {
 		try {

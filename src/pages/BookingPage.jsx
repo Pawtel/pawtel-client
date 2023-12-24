@@ -63,7 +63,7 @@ const BookingPage = () => {
 	const handleBack = () => {
 		setStep((prevStep) => Math.max(1, prevStep - 1));
 	};
-
+	
 	const renderStep = () => {
 		switch (step) {
 			case 1:

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const PetDetailsForm = ({ onNext }) => {
-	const [petDetails, setPetDetails] = useState({
+	const initialPetDetails = {
 		animalType: "",
 		name: "",
 		breed: "",
@@ -11,7 +11,9 @@ const PetDetailsForm = ({ onNext }) => {
 		favouriteToys: [],
 		dietaryRequirements: [],
 		allergies: [],
-	});
+	}
+
+	const [petDetails, setPetDetails] = useState(initialPetDetails);
 
 	const handleInputChange = (e) => {
 		const { name, value } = e.target;
@@ -37,7 +39,7 @@ const PetDetailsForm = ({ onNext }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// Validation logic can be added here
-
+		
 		// Call the onNext function to proceed to the next step
 		onNext(petDetails);
 	};
