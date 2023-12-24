@@ -8,7 +8,7 @@ import { jwtDecode } from "jwt-decode";
 const Login = () => {
 	// State variables to manage email, password, error message, and success message
 	const [email, setEmail] = useState("");
-	const [username, setUsername] = useState("");
+
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState(null);
 	const [message, setMessage] = useState("");
@@ -20,7 +20,7 @@ const Login = () => {
 			const response = await axios.post(
 				"https://pawtel-48da552cecec.herokuapp.com/users/login",
 				{
-					username: username,
+					username: email,
 					password: password,
 				}
 			);
@@ -31,7 +31,7 @@ const Login = () => {
 			localStorage.setItem("jwt", jwtToken);
 
 			// Resetting form fields and displaying success message
-			setUsername("");
+			setEmail("");
 			setPassword("");
 			setMessage("Successful login");
 			console.log("Successful login");
@@ -81,12 +81,12 @@ const Login = () => {
 			<h2>Sign In / Sign Up</h2>
 			<div className="login-form">
 				{/* Input fields for email and password */}
-				<label htmlFor="username">Username:</label>
+				<label htmlFor="email">Email:</label>
 				<input
-					id="username"
-					type="username"
-					value={username}
-					onChange={(e) => setUsername(e.target.value)}
+					id="email"
+					type="email"
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
 					required
 				/>
 
